@@ -4,24 +4,27 @@ body {
   height: 100%;
   margin: 0;
 }
+
+.font {
+  font-family: 'Lora', serif !important;
+}
+
+p {
+  font-family: 'Lora', serif !important;
+  font-size: 120%;
+  line-height: 150%;
+}
+
 section {
   height: 100vh;
 }
-section:nth-child(1) {
+
+/*section:nth-child(2) {
   background: lightblue;
 }
-section:nth-child(2) {
-  background: ;
-}
 section:nth-child(3) {
-  background: lightgrey;
-}
-section:nth-child(4) {
-  background: red;
-}
-section:nth-child(5) {
-  background: yellow;
-}
+  background: lightgreen;
+}*/
 
 section#title {
   color: white;
@@ -46,4 +49,15 @@ section#title {
   -webkit-justify-content:center;
   -ms-flex-pack:center;
   justify-content:center;
+}
+
+.references {
+  list-style-type: none;
+  counter-reset: elementcounter;
+  padding-left: 0;
+}
+
+.references li:before {
+  content: "[" counter(elementcounter) "] ";
+  counter-increment:elementcounter;
 }
